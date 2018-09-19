@@ -13,6 +13,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            desc
           }
         }
       }
@@ -49,14 +50,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        title
-        desc
-      }
-    }
-  }
-`
