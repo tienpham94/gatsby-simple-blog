@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} data={data} />
         <div
           style={{
             margin: '0 auto',
@@ -49,3 +49,14 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        desc
+      }
+    }
+  }
+`

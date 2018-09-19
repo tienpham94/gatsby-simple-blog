@@ -34,6 +34,8 @@ const Header = ({ data }) => (
           <img src={logo} alt="Level Up Logo" />
         </Link>
       </h1>
+      <p>{data.site.siteMetadata.title}</p>
+      <p>{data.site.siteMetadata.desc}</p>
       <nav>
         <ul>
           <li>
