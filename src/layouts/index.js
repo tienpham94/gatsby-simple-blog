@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 
-const TemplateWrapper = ({ children, data }) => (
+const TemplateWrapper = ({ children, data, location }) => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header data={data} />
+    <Header data={data} location={location} />
     <div
       style={{
         margin: '0 auto',
