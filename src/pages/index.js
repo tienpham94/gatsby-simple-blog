@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import PostListing from '../components/Posts/PostListing'
 
 const IndexPage = ({ data }) => (
@@ -27,6 +28,9 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD YYYY")
+          }
+          fields {
+            slug
           }
           html
           excerpt
